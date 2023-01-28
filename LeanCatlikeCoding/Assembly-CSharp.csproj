@@ -52,8 +52,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Basics\Script\GameObjectAndScript\ClockInit.cs" />
      <Compile Include="Assets\Basics\Script\GameObjectAndScript\Clock.cs" />
+     <Compile Include="Assets\Basics\Script\GameObjectAndScript\ClockInit.cs" />
  <Reference Include="UnityEngine">
  <HintPath>D:/WorkUnity/Unity 2020.3.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
