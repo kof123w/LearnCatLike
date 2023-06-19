@@ -439,9 +439,9 @@
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Drawing\Controls\ColorControl.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Nodes\Math\Interpolation\LerpNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Nodes\Procedural\Shape\EllipseNode.cs" />
-     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Generation\Processors\ShaderSpliceUtil.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Drawing\Controls\ToggleControl.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Drawing\Views\Slots\BooleanSlotControlView.cs" />
+     <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Generation\Processors\ShaderSpliceUtil.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Data\Nodes\UV\TwirlNode.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Drawing\Views\ContextView.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@10.6.0\Editor\Generation\Enumerations\Blend.cs" />

@@ -44,6 +44,8 @@
      <Compile Include="Assets\Basics\GameObjectAndScript\Script\GameObjectAndScript\Clock.cs" />
      <Compile Include="Assets\Basics\GameObjectAndScript\Script\GameObjectAndScript\ClockInit.cs" />
      <Compile Include="Assets\Basics\BuildGraph\Script\Graph.cs" />
+     <Compile Include="Assets\Basics\BuildGraph\Script\TestNewGame.cs" />
+     <Compile Include="Assets\Basics\BuildGraph\Script\FunctionLibrary.cs" />
      <Folder Include="Assets" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@1.13.5\Lib\Editor\PlasticSCM\localization\workspaceserver.zh-Hans.txt" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@1.13.5\Lib\Editor\PlasticSCM\localization\cm-help.en.txt" />
