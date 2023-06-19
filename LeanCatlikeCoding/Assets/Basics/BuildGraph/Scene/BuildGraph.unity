@@ -170,9 +170,9 @@ MonoBehaviour:
   createPointNum: 2500
   pointDist: 0.05
   zPointDist: 0.05
-  max: 40
+  max: 30
   scale: 0.03
-  funcIndex: 0
+  funcIndex: 4
 --- !u!1 &999210115
 GameObject:
   m_ObjectHideFlags: 0

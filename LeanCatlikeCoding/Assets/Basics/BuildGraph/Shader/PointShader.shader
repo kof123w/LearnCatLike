@@ -8,8 +8,8 @@ shader "Custom/PointShader"
         Pass{
             CGPROGRAM
             #pragma target 3.0 
-            #pragma vertex vert       //定义一个顶点着色器 
-            #pragma fragment frag     //定义一个片元着色器
+            #pragma vertex vert        
+            #pragma fragment frag     
             
             struct adp_data
             {

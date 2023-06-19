@@ -41,15 +41,12 @@ public class Graph : MonoBehaviour
         FunctionLibrary.Function f = FunctionLibrary.GetFunc((int)funcIndex);
         float time = Time.time;
         int index = GetStartX();
-        int zIndex = 0;
+        int zIndex = - _transforms.Length / max / 4;
         for (int i = 0;i < _transforms.Length;i++)
         {
             float x = index * pointDist;
-            float z = zIndex * zPointDist;
-            _cache.x = x;
-            _cache.y = f(x,z,time);
-            _cache.z = z;
-            _transforms[i].localPosition = _cache;
+            float z = zIndex * zPointDist; 
+            _transforms[i].localPosition = f(x,z,time);;
             index++;
             if (index >= max){
                 index = GetStartX();

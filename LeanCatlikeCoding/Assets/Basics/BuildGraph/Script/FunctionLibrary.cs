@@ -5,42 +5,62 @@ using static UnityEngine.Mathf;
 
 public static class FunctionLibrary
 {
-    public delegate float Function(float x,float z,float t);
-    public static Function[] functions = {DrawSin,Wave,MultiWave,Ripple,RippleAnim};
-    public enum FuncName {DrawSin,Wave,MultiWave,Ripple,RippleAnim } 
-    public static float DrawSin(float x,float z,float t)
+    public delegate Vector3 Function(float x,float z,float t);
+    public static Function[] functions = {DrawSin,Wave,MultiWave,Ripple,Sphere};
+    public enum FuncName {DrawSin,Wave,MultiWave,Ripple,Sphere} 
+    public static Vector3 DrawSin(float u,float v,float t)
     {
-        return Mathf.Sin( PI * (x + z + t))/2;
+        Vector3 p;
+        p.x = u;
+        p.z = v;
+        p.y = Mathf.Sin( PI * ( u + v + t))/2;
+        return p;
     }
     public static Function GetFunc(int index)
     {
         return functions[index];
     } 
     
-    public static float Wave(float x,float z, float t)
+    public static Vector3 Wave(float u,float v, float t)
     {
-        float y = Sin(PI * (x + t));
-        y += 0.5f * Sin(2f * PI * (z + t));
-        return y / 1.5f;
+        Vector3 p;
+        p.x = u;
+        p.z = v;
+        float y = Sin(PI * (u + t));
+        y += 0.5f * Sin(2f * PI * (v + t));
+        p.y = y / 1.5f;
+        return p;
     }
 
-    public static float MultiWave(float x,float z, float t)
+    public static Vector3 MultiWave(float u,float v, float t)
     {
-        float y = Sin(PI * (x + 0.5f * t));
-        y += 0.5f * Sin(2f * PI * (z + t));
-        return y / 1.5f;
+        Vector3 p;
+        p.x = u;
+        p.z = v;
+        float y = Sin(PI * (u + 0.5f * t));
+        y += 0.5f * Sin(2f * PI * (v + t));
+        y += Sin(PI * (u + v + 0.25f * t));
+        p.y = y * (1f / 2.5f);
+        return p;
     }
 
-    public static float Ripple(float x,float z, float t)
+    public static Vector3 Ripple(float u,float v, float t)
     {
-        float d = Abs(x);
-        return Sin(PI * 4.0f * d);
+        Vector3 p;
+        p.x = u;
+        p.z = v;
+        float d = Sqrt(u*u + v*v);
+        float y = Sin(PI * (4f * d - t));
+        p.y = y / (1 + 10 * d);
+        return p;
     }
 
-    public static float RippleAnim(float x,float z, float t)
+    public static Vector3 Sphere(float u,float v, float t)
     {
-        float d = Abs(x);
-        float y = Sin(PI * (4.0f*d - t));
-        return y / (1.0f + 10.0f * d);
-    } 
+        Vector3 p;
+        p.x = Sin(u  * PI);
+        p.y = 0;
+        p.z = Cos(u  * PI);
+        return p;
+    }
 }
